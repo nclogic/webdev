@@ -1,0 +1,123 @@
+:root {
+  --site-default-main-bg-color: #e9f8ea;
+  --site-default-main-text-color: black;
+  --site-default-head-foot-bg-color: #bcda9a;
+  --site-default-head-foot-text-color: #075a0e;
+  --site-default-imortant-text-color : #cc5460;
+  --site-default-menu-panel-bg-color: #bcda9ae6;
+}
+body {
+  max-width: 100%;
+  display: block;
+  justify-content: center;
+  padding: 1vh 5vw;
+  font-size: 2.3vh; 
+  line-height: 1.6;
+  height: auto;
+  background-color: var(--site-default-main-bg-color);
+  color: var(--site-default-main-text-color);
+}
+figure {
+  display: block;
+  justify-content: center;
+  width: 83%;
+  align-items: center;
+  border: 3px solid rgb(97, 94, 94);
+  background-color: rgb(22, 21, 21);
+  font-family: Georgia, Times, serif;
+  letter-spacing: 1px;
+  overflow: auto;
+  text-wrap: nowrap;
+  padding: 2vh 0vw 3vh 3vw ;
+  font-size: 1.3vw;
+}
+figcaption {
+  font-size: 1.7vw;
+  margin-bottom: -1.95vh;
+  margin-top: 0px;
+}
+.header {
+  color: var(--site-default-head-foot-text-color);
+  background-color: var(--site-default-head-foot-bg-color); /* Background color */
+  border-bottom: 3px solid var(--site-default-head-foot-text-color);
+}
+.header-title h1 {
+  text-decoration: underline;
+}
+#side-menu {
+  position: fixed;
+  font-family: 'sans-serif';
+  top: 25%;
+  left: -250px; /* Hidden by default */
+  width: 250px; /* Adjust width as needed */
+  height: 51%; /* Maximum height when fully expanded */
+  transition: left 0.3s; /* Smooth sliding animation */
+  border-radius: 5px;
+  padding: 1vh -2vw 1vh 3vw;
+  border-right: 3px solid var(--site-default-head-foot-text-color);
+  background-color: var(--site-default-menu-panel-bg-color); /* Background color */
+  color: var(--site-default-head-foot-text-color); /* Text color */
+}
+.rotated-text-container { /* This is the side menu tab */
+  position: absolute;
+  top: 40%; /* asjust this to adjust the loction of the menu tag from the top */
+  left: 95%;
+  transform: translate(0%, -50%) rotate(-90deg);
+  font-size: 2vw; /* Adjust the font size as needed */
+  padding: -1px 5px 0px 5px; /* Add padding to style the rotated text */
+  border-bottom: 3px solid var(--site-default-head-foot-text-color);
+  border-radius: 5px;
+  background-color: var(--site-default-menu-panel-bg-color); /* Background color */
+  color: var(--site-default-head-foot-text-color); /* Text color */
+}
+<!-- These are the colors for the simulated code displays -->
+.lineNumbers {
+  color:gray;
+}
+
+.topic {
+  font-size: 2.6vw;
+  text-align: center; /* Center the text horizontally */
+  line-height: 1;
+  margin-bottom: -5vh;
+}
+
+
+
+.doctype {
+  color: rgb(78, 78, 253);
+}
+.punctuation {
+  color: white;
+}
+.codeText {
+  color: whitesmoke;
+}
+.attr-name, .name{
+  color: green;
+}
+.tag {
+  color: rgb(228, 58, 58);
+}
+.ctag {
+  color: white;
+}
+.c-class {
+  color: green;
+}
+.c-text {
+  color: rgb(7, 86, 117);
+  font-weight: bold;
+}
+.c-punctuation {
+  color: white;
+}
+.baseSelector {
+  color: red;
+}
+.number {
+  color:purple;
+}
+.unit {
+  color: red;
+}
