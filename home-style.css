@@ -70,8 +70,8 @@ figcaption {
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
 }
-<!-- These are the colors for the simulated code displays -->
-.lineNumbers {
+/* These are the colors for the simulated code displays */
+.line-numbers {
   color:gray;
 }
 
@@ -85,39 +85,36 @@ figcaption {
 
 
 .doctype {
-  color: rgb(78, 78, 253);
+  color: rgb(238, 17, 17);
 }
 .punctuation {
   color: white;
 }
-.codeText {
+.text {
   color: whitesmoke;
 }
-.attr-name, .name{
+.property{
   color: green;
 }
-.tag {
-  color: rgb(228, 58, 58);
+.property-values {
+  color: orange;
 }
-.ctag {
-  color: white;
+.element-name {
+  color: rgb(204, 10, 10);
 }
+
 .c-class {
   color: green;
 }
 .c-text {
-  color: rgb(7, 86, 117);
-  font-weight: bold;
+  color:rgb(37, 117, 163);
 }
-.c-punctuation {
-  color: white;
-}
-.baseSelector {
+.base-selector {
   color: red;
 }
 .number {
-  color:purple;
+  color:rgb(189, 37, 189);
 }
 .unit {
-  color: red;
+  color: rgb(199, 23, 23);
 }
