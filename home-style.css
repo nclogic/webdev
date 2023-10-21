@@ -73,18 +73,20 @@ figcaption {
   border-right: 3px solid var(--site-default-head-foot-text-color);
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
+  right: 0;
 }
 .rotated-text-container { /* This is the side menu tab */
   position: absolute;
   top: 40%; /* asjust this to adjust the loction of the menu tag from the top */
   left: 95%;
   transform: translate(0%, -50%) rotate(-90deg);
-  font-size: 2vw; /* Adjust the font size as needed */
+  font-size: 21px; /* Adjust the font size as needed */
   padding: -1px 5px 0px 5px; /* Add padding to style the rotated text */
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
   border-radius: 5px;
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
+  left: 230px;
 }
 /* These are the colors for the simulated code displays */
 .line-numbers {
@@ -161,4 +163,16 @@ figcaption {
   font-size: 1.8vw;
   margin-left: 50px;
   margin-top: 0px;
+}
+@media screen and (max-width: 420px) {
+  /* adjustemts for smaller screens */
+  figure {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 290px) {
+  /* adjustemts for smaller screens */
+  figure {
+    width: 75%;
+  }
 }
