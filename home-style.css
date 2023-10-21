@@ -10,7 +10,7 @@ body {
   margin: 0;
   max-width: 100%;
   height: auto;
-  display: block;  
+  display: block;
   padding: 1vh 5vw;
   background-color: var(--site-default-main-bg-color);
   color: var(--site-default-main-text-color);
@@ -32,9 +32,9 @@ figure {
 }
 figcaption {
   font-size: 1.7vw;
-  margin-bottom: -1.95vh;
+  margin-bottom: 1px;
   margin-top: 0px;
-  marging-left: 30px;
+  margin-left: 30px;
 }
 .logo {
   display: inline-block;
@@ -51,11 +51,14 @@ figcaption {
   color: var(--site-default-head-foot-text-color);
   background-color: var(--site-default-head-foot-bg-color); /* Background color */
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
+
 }
+
 .header-title h1 {
   display: inline-block;
   text-decoration: underline;
   font-size: 3.3vw;
+
 }
 #side-menu {
   position: fixed;
@@ -126,6 +129,26 @@ figcaption {
 .unit {
   color: rgb(199, 23, 23);
 }
+.steps {
+  font-weight: 600;
+}
 .code-line-background {
   background-color: black;
+}
+.text-h1 {
+  color: whitesmoke;
+  font-size: 1.6em; /* Relative to the surrounding text (1.3vw), this makes it larger */
+}
+.text-h2 {
+  color: whitesmoke;
+  font-size: 1.4em; /* Slightly smaller than h1 */
+}
+.text-h3 {
+  color: whitesmoke;
+  font-size: 1.2em; /* Smaller than h2 */
+}
+.text-em {
+  color: whitesmoke;
+  font-style: italic; /* Makes the text italic */
+  font-weight: normal; /* Ensures the text is not bold */
 }
