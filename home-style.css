@@ -51,14 +51,14 @@ figcaption {
   color: var(--site-default-head-foot-text-color);
   background-color: var(--site-default-head-foot-bg-color); /* Background color */
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
-
+  border-radius: 10px;
 }
 
 .header-title h1 {
   display: inline-block;
   text-decoration: underline;
   font-size: 3.3vw;
-
+  margin-right:20px;
 }
 #side-menu {
   position: fixed;
