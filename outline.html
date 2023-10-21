@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site">
+    <title>Beginner Web Development Reference Site, Outline Page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="stylesheet" href="green-color-style.css" id="color-style-sheet"> <!-- This is the default color scheme and handles most color styles for the page. -->
+    <link rel="stylesheet" href="common-style.css" id="common-style"> <!-- This is for styles common to all pages except color.  -->
+    <link rel="stylesheet" href="home-style.css" id="specific-style"> <!-- This contains styling specific to this page. -->
+    <script src="home.js"></script> <!-- JavaScript file --><!--Currently all files will be in same directory until I figure out how to create additional ones here -->
+  </head>
+<body class="body">
+  <header class="header"> 
+    <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div>
+    <div class="header-title"><h1>Site Outline</h1></div>
+  </header>
+  <nav> <!-- I decided to make the navigation menu as a slideout menu with a tab to hover over to activate it. -->
+    <div class="menu-div" id="side-menu">
+      <ul class="nav-menu-list">
+        <li class="nav-menu-list-item">
+          <a class="site-page-links" id="home-page-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-menu-list-item">
+          <a class="site-page-links" id="outline-page-link" href="outline.html">Site Outline</a>
+        </li>
+        <li class="nav-menu-list-item">
+          <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
+        </li>
+        <div class="rotated-text-container"> <!-- This is the menu tab -->
+          <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
+        </div>
+      </ul>
+    </div>
+  </nav>
+  <main class="main">
+    <h3>Some steps to consider</h3>
+    <span><p>Creating a reference website is an excellent way to solidify your understanding of web development and learn by doing. Here are some steps and suggestions:</p></span>
+    <p><span class="steps">1. **Planning and Structure**:</span>
+        - Begin by outlining the topics you want to cover on your reference website. Create a hierarchy of these topics, considering the main page as well as subpages for each topic.
+        - Think about how you want to organize and present information, and sketch a basic layout for each page.
+    </p>
+  
+    <p><span class="steps">2. **HTML/CSS First, JavaScript Later**:</span>
+        - Starting with HTML and CSS is a great approach. You can create the structure, layout, and styling of your reference website without JavaScript first. This will give you a solid foundation.
+    </p>
+  
+    <p><span class="steps">3. **Accessible Design**:</span>
+        - Make accessibility a priority from the beginning. Use semantic HTML elements, provide alternative text for images, ensure proper heading structure, and maintain good color contrast for readability.
+    </p>
+  
+    <p><span class="steps">4. **Separate CSS Files**:</span>
+        - It's a good practice to have separate CSS files for different sections or topics. This keeps your code organized and makes it easier to maintain.
+    </p>
+  
+    <p><span class="steps">5. **Navigation**:</span>
+        - Create a navigation menu on the main page that links to various topics or sections within the website. You can use HTML lists (e.g., `ul` and `li`) for this menu.
+    </p>
+  
+    <p><span class="steps">6. **Search Functionality**:</span>
+        - To implement a search function, you can start with a simple JavaScript-based search box. JavaScript can filter through the content and display relevant links. However, this is a feature that would be added in the future.
+    </p>
+  
+    <p><span class="steps">7. **Responsive Design**:</span>
+        - Ensure that your website is responsive, meaning it adapts well to different screen sizes and devices. Use media queries and relative units (like percentages) to make your content look good on both desktop and mobile.
+    </p>
+  
+    <p><span class="steps">8. **Testing and Validation**:</span>
+        - Regularly test your website on different browsers and devices to ensure it functions and looks as expected. Validate your HTML and CSS to catch any errors.
+    </p>
+  
+    <p><span class="steps">9. **Documentation and Comments**:</span>
+        - Add comments in your HTML and CSS code to explain what each part does. This will help you understand and maintain your code in the future.
+    </p>
+  
+    <p><span class="steps">10. **Hosting and Domain**:</span>
+          - Consider where you want to host your website and if you want to register a domain name. There are many hosting providers available.
+    </p>
+  
+    <p><span class="steps">11. **Learning and Expanding**:</span>
+          - As you become more proficient with web development, you can gradually introduce JavaScript to add interactivity and more advanced features.
+    </p>
+  
+    <p><span class="steps">12. **Version Control**:</span>
+          - It can be helpful to use version control software like Git to keep track of changes to your code and collaborate with others if needed.
+    </p>
+  
+    <p><span class="steps">13. **Online Resources**:</span>
+          - Use online tutorials and documentation as references. There are many resources available for web development, including MDN Web Docs, W3Schools, and freeCodeCamp.
+    </p>
+  
+      Remember that this is a great way to apply what you learn and learn new things as you go. Start small, build your skills, and expand your website over time. It's a fantastic journey that can provide a comprehensive understanding of web development.
+    </p>
+  </main>
+</body>
+</html>

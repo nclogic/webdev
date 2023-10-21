@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site">
+    <title>Web Image Related Reference</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="stylesheet" href="green-color-style.css" id="color-style-sheet"> <!-- This is the default color scheme and handles most color styles for the page. -->
+    <link rel="stylesheet" href="common-style.css" id="common-style"> <!-- This is for styles common to all pages except color.  -->
+    <link rel="stylesheet" href="home-style.css" id="specific-style"> <!-- This contains styling specific to this page. -->
+    <script src="home.js"></script> <!-- JavaScript file --><!--Currently all files will be in same directory until I figure out how to create additional ones here -->
+  </head>
+  <body class="body">
+    <header class="header"> 
+      <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div>
+      <div class="header-title"><h1>Beginner HTML/CSS & JavaScript Reference Site</h1></div>
+    </header>
+    <nav> <!-- I decided to make the navigation menu as a slideout menu with a tab to hover over to activate it. -->
+      <div class="menu-div" id="side-menu">
+        <ul class="nav-menu-list">
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="home-page-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="outline-page-link" href="outline.html">Site Outline</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
+          </li>
+          <div class="rotated-text-container"> <!-- This is the menu tab -->
+            <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <h3>Website image info</h3>
+      <a href="https://favicon.io/favicon-generator/">an icon generator</a>
+      <pre>
+        <p>Choosing the right image sizes and formats is crucial for optimizing your website's performance and user experience.
+           Let's go through some typical image sizes and formats for various web elements:</p>
+        <span class="steps">1. **Logos**:</span>
+          - Common Sizes: Logos can vary in size, but a standard size for a website logo is around 200x50 pixels.
+          - Format: Use PNG or SVG for logos. PNG is suitable for images with transparency,
+              while SVG is vector-based and works well at any size.
+        
+        <span class="steps">2. **Icons**:</span>
+          - Common Sizes: Icons can range from 16x16 to 64x64 pixels, depending on their usage.
+          - Format: PNG or SVG are good choices for icons as well. SVG is ideal if you want them to be scalable.
+        
+        <span class="steps">3. **Headers**:</span>
+          - Common Sizes: Header images can be around 1200x300 pixels, but it can vary based on your design.
+          - Format: JPEG or PNG for photographs, and PNG for images with transparency or simpler graphics. 
+              Compress JPEGs to reduce file size.
+        
+        <span class="steps">4. **Footer**:</span>
+          - Common Sizes: Footers may include smaller images, typically 200x50 pixels or less.
+          - Format: Similar to logos, use PNG or SVG, depending on the design.
+        
+        <span class="steps">5. **Page Backgrounds**:</span>
+          - Common Sizes: Background images should be large enough to cover the entire viewport, often 1920x1080 pixels.
+          - Format: JPEG is common for background images, but make sure to compress it to keep the file size manageable.
+        <p>
+          Remember, it's essential to consider image compression to reduce file sizes without compromising quality.
+          Tools like ImageMagick for command-line or online services like TinyPNG can help with this.
+        
+          Additionally, when implementing these images in your website, be mindful of responsive design. 
+          Use CSS to ensure images adapt to different screen sizes and orientations. 
+          You might also want to consider the `srcset` attribute for responsive images in HTML, 
+            which allows you to provide different image sizes for different devices.
+        </p>
+        <p>
+        The `srcset` attribute is a valuable HTML attribute used to provide multiple image sources for different screen
+          resolutions and sizes. It's particularly useful in responsive web design, where you want to ensure that your 
+          images look good on various devices with different screen dimensions and resolutions. The `srcset` attribute 
+          allows the browser to choose the most appropriate image source based on the user's device, which can 
+          significantly improve web performance and user experience.
+
+        Here's how you can use the `srcset` attribute:
+
+        ```html
+        <!--<img src="default.jpg" alt="Default Image" srcset="image1.jpg 1x, image2.jpg 2x, image3.jpg 3x">-->
+        ```
+
+        - The `src` attribute points to the default image that will be displayed if the browser doesn't support `srcset` 
+            or none of the provided sources match the user's device.
+
+        - The `srcset` attribute contains a list of image sources, each followed by a descriptor that defines its pixel 
+            density. In the example above, we have three sources: `image1.jpg`, `image2.jpg`, and `image3.jpg`, 
+            with pixel densities of 1x, 2x, and 3x, respectively.
+
+        When the browser loads the page, it checks the device's pixel density 
+          (usually referred to as the device pixel ratio or DPR) and screen size. 
+          It then selects the most appropriate source from the `srcset` based on these factors. 
+          For example:
+          - If the user is on a standard display with a 1x pixel density, the browser will load `image1.jpg`.
+          - If the user is on a high-resolution Retina display with a 2x pixel density, it will load `image2.jpg`.
+          - For an even higher-resolution device with a 3x pixel density, it will choose `image3.jpg`.
+
+        By using `srcset`, you can provide multiple versions of your images tailored to different devices, 
+          which helps improve load times and ensures your website looks sharp on all screens.
+
+        Additionally, you can combine `srcset` with the `sizes` attribute to provide information about the image's 
+        display size. This helps the browser make even more precise decisions about which image to load.
+        </p>
+        <p>
+        Creating a favicon is a common step in web development, and it's a small but important detail 
+          that can make your website more professional and recognizable. 
+        
+          Here are some suggestions for creating and implementing a favicon:
+    
+        <span class="steps">**Creating a Favicon**:</span>
+        <span class="steps">1. **Image Format**:</span> Favicons are typically in the ICO format. 
+        While SVGs are great for many web graphics, they are not recommended for favicons. 
+        You'll want to create an ICO file specifically for the favicon.
+    
+        <span class="steps">2. **Size**:</span> Favicons should be square, and a common size is 16x16 pixels 
+        or 32x32 pixels. You can also create larger versions for different use cases, like bookmarks and tabs.
+    
+        <span class="steps">3. **Design**: Keep your favicon design simple and recognizable. It's a small graphic, 
+        so intricate details may not be visible.
+    
+        <span class="steps">**Where to Get a Favicon**:</span>
+        <span class="steps">1. **Create Your Own**:</span> If you have graphic design skills, 
+        you can create your own favicon using graphic design software like Adobe Illustrator, Inkscape, 
+        or online tools like Favicon.io or RealFaviconGenerator.net.
+    
+        <span class="steps">2. **Favicon Generators**:</span> There are online favicon generators that can 
+        help you create a favicon from an existing image. These tools typically allow you to upload an image, 
+        and they will generate the necessary ICO file.
+    
+        <span class="steps">3. **Favicon from Logo**:</span> If you have a logo, you can create a simplified version 
+        of it to use as a favicon. Make sure it's recognizable even at a small size.
+    
+        <span class="steps">4. **Stock Icons**:</span> Some websites offer free or paid favicon sets. These can be 
+        a quick way to get a professional-looking favicon if you don't have design skills.
+    
+        <span class="steps">**Implementing the Favicon**:</span>
+        <span class="steps">1. Once you have your favicon.ico file, place it in the root directory of your website. 
+          It should be accessible at the root level, like `https://yourwebsite.com/favicon.ico`.
+    
+        2. Add the following code to your HTML's ` <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">head</span><span class="punctuation">&gt;</span></span> ` section, typically in your `home.html` or a shared template file:
+    
+        ```html
+        <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">link</span>&nbsp;<span class="property">rel</span><span class="punctuation">&#61;&quot;</span><span class="property-values">icon</span><span class="punctuation">&quot;&nbsp;</span><span class="property">href</span><span class="punctuation">&#61;&quot;&sol;</span><span class="property-values">favicon.ico</span><span class="punctuation">&quot;&nbsp;</span><span class="property">type</span><span class="punctuation">&#61;&quot;</span><span class="property-values">image/x-icon</span><span class="punctuation">&quot;&gt;</span></span>
+        ```
+    
+        3. Test your website in different browsers to ensure that the favicon is displayed correctly.
+    
+        Remember to keep the favicon simple, and make sure it's related to your website's branding or content. 
+        A well-designed favicon can help users easily identify your website when they have multiple tabs or bookmarks open.
+        </p>
+      </pre>
+    </main>
+  </body>
+</html>
