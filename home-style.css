@@ -126,3 +126,6 @@ figcaption {
 .unit {
   color: rgb(199, 23, 23);
 }
+.code-line-background {
+  background-color: black;
+}
