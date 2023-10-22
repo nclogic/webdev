@@ -39,119 +39,120 @@
       <h4>Choosing the right image sizes and formats is crucial for optimizing your website's performance and user experience.
         Let's go through some typical image sizes and formats for various web elements:</h4>
       <ul>  
-        <li><span class="steps">1. **Logos**:</span></li>
-        <li>Common Sizes: Logos can vary in size, but a standard size for a website logo is around 200x50 pixels</li>
-        <li>Format: Use PNG or SVG for logos. PNG is suitable for images with transparency</li>
-        <li>While SVG is vector-based and works well at any size</li>
-        <p class="steps">2. **Icons**:</p>
-        - Common Sizes: Icons can range from 16x16 to 64x64 pixels, depending on their usage.
-        - Format: PNG or SVG are good choices for icons as well. SVG is ideal if you want them to be scalable.
-      
-        <p class="steps">3. **Headers**:</p>
-          - Common Sizes: Header images can be around 1200x300 pixels, but it can vary based on your design.
-          - Format: JPEG or PNG for photographs, and PNG for images with transparency or simpler graphics. 
-              Compress JPEGs to reduce file size.
-        
-        <p class="steps">4. **Footer**:</p>
-          - Common Sizes: Footers may include smaller images, typically 200x50 pixels or less.
-          - Format: Similar to logos, use PNG or SVG, depending on the design.
-        
-        <p class="steps">5. **Page Backgrounds**:</p>
-          - Common Sizes: Background images should be large enough to cover the entire viewport, often 1920x1080 pixels.
-          - Format: JPEG is common for background images, but make sure to compress it to keep the file size manageable.
+        <span class="steps">1. **Logos**:</span>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Common Sizes: </strong>Logos can vary in size, but a standard size for a website logo is around <em>200x50 pixels</em></li>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Format: </strong> <em>PNG</em> or <em>SVG</em> for logos. <em>PNG</em> is suitable for images with transparency,</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While <em>SVG</em> is vector-based and works well at any size</li>
+        <br>
+        <span class="steps">2. **Icons**:</span>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Common Sizes: </strong> Icons can range from 16x16 to 64x64 pixels, depending on their usage.</li>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Format: </strong>PNG or SVG are good choices for icons as well. SVG is ideal if you want them to be scalable.</li>
+        <br>
+        <span class="steps">3. **Headers**:</span>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Common Sizes: </strong> Header images can be around <em>1200x300 pixels</em>, but it can vary based on your design.</li>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Format: </strong><em>JPEG</em> or <em>PNG</em> for photographs, and <em>PNG</em> for images with transparency or simpler graphics. </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compress <em>JPEG's</em> to reduce file size.</li>
+        <br>
+        <span class="steps">4. **Footer**:</span>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Common Sizes: </strong> Footers may include smaller images, typically <em>200x50 pixels</em> or less.</li>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Format: </strong>Similar to logos, use <em>PNG</em> or <em>SVG</em>, depending on the design.</li>
+        <br>
+        <span class="steps">5. **Page Backgrounds**:</span>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Common Sizes: </strong> Background images should be large enough to cover the entire viewport, often <em>1920x1080 pixels</em>.</li>
+        <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Format: </strong><em>JPEG</em> is common for background images, but make sure to compress it to keep the file size manageable.</li>
       </ul>
       <p>
         Remember, it's essential to consider image compression to reduce file sizes without compromising quality.
-        Tools like ImageMagick for command-line or online services like TinyPNG can help with this.
+        Tools like <a href="https://imagemagick.org/"><em>ImageMagick </em></a>for command-line, or online services like <a href="https://tinypng.com/"><em>TinyPNG </em></a> can help with this.
     
-        Additionally, when implementing these images in your website, be mindful of responsive design. 
+        Additionally, when implementing these images in your website, be mindful of <em><strong><span class="underlined">responsive</span></strong></em> design. 
         Use CSS to ensure images adapt to different screen sizes and orientations. 
-        You might also want to consider the `srcset` attribute for responsive images in HTML, 
+        You might also want to consider the <em><strong>`srcset`</strong></em> attribute for <em><strong><span class="underlined">responsive</span></strong></em> images in HTML, 
         which allows you to provide different image sizes for different devices.
       </p>
       
-      <h4>The `srcset` attribute is a valuable HTML attribute</h4>
+      <h4>The <em>`srcset`</em> attribute is a valuable HTML attribute</h4>
       <p>
           It is used to provide multiple image sources for different screen resolutions and sizes. 
-          It's particularly useful in responsive web design, where you want to ensure that your images look good on various devices with different screen dimensions and resolutions. 
-          The `srcset` attribute allows the browser to choose the most appropriate image source based on the user's device, which can significantly improve web performance and user experience.
+          It's particularly useful in <em><strong><span class="underlined">responsive</span></strong></em> web design, where you want to ensure that your images look good on various devices with different screen dimensions and resolutions. 
+          The <em><strong>`srcset`</strong></em> attribute allows the browser to choose the most appropriate image source based on the user's device, which can significantly improve web performance and user experience.
       </p>
 
-      <h4>Here's how you can use the `srcset` attribute:</h4>
+      <h4>Here's how you can use the <em>`srcset`</em> attribute:</h4>
       <span class="c-text">
       &lt;img src="default.jpg" alt="Default Image" srcset="image1.jpg 1x, image2.jpg 2x, image3.jpg 3x"&gt;
       </span>
       <p>
-        The `src` attribute points to the default image that will be displayed if the browser doesn't support `srcset` 
+        The <em>`src`</em> attribute points to the default image that will be displayed if the browser doesn't support <em>`srcset` </em>
         or none of the provided sources match the user's device.
 
-        The `srcset` attribute contains a list of image sources, each followed by a descriptor that defines its pixel 
-        density. In the example above, we have three sources: `image1.jpg`, `image2.jpg`, and `image3.jpg`, 
-        with pixel densities of 1x, 2x, and 3x, respectively.
+        The <em><span class="underlined">`srcset`</span></em> attribute contains a <span class="underlined">list of image sources</span>, each followed by a <span class="underlined">descriptor</span> that defines its <span class="underlined">pixel 
+        density</span>. In the example above, we have three sources: <span class="c-text">`image1.jpg`</span>, <span class="c-text">`image2.jpg`</span>, and <span class="c-text">`image3.jpg`</span>, 
+        with <span class="underlined">pixel densities</span> of <span class="c-text">1x</span>, <span class="c-text">2x</span>, and <span class="c-text">3x</span>, respectively.
 
-        When the browser loads the page, it checks the device's pixel density 
-        (usually referred to as the device pixel ratio or DPR) and screen size. 
-        It then selects the most appropriate source from the `srcset` based on these factors. 
+        When the browser loads the page, it checks the device's <span class="underlined">pixel density</span> 
+        (usually referred to as the device <em>pixel ratio or DPR</em>) and screen size. 
+        It then selects the most appropriate source from the <em>`srcset`</em> based on these factors. 
       </p>
       <ul>
-        <li>For example:</li>
-        <li>If the user is on a high-resolution Retina display with a 2x pixel density, it will load `image2.jpg`.</li>
-        <li>If the user is on a standard display with a 1x pixel density, the browser will load `image1.jpg`.</li>
-        <li>For an even higher-resolution device with a 3x pixel density, it will choose `image3.jpg`.</li>
+        <li><strong>For example:</strong></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;If the user is on a <span class="underlined">high-resolution</span> Retina display with a <strong>2x pixel density</strong>, it will load <span class="c-text">`image2.jpg`</span>.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;If the user is on a <span class="underlined">standard display</span> with a <strong>1x pixel density</strong>, the browser will load <span class="c-text">`image1.jpg`</span>.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;For an even <span class="underlined">higher-resolution</span> device with a <strong>3x pixel density</strong>, it will choose <span class="c-text">`image3.jpg`</span>.</li>
       <p>  
-        By using `srcset`, you can provide multiple versions of your images tailored to different devices, 
+        By using <em>`srcset`</em>, you can provide multiple versions of your images tailored to different devices, 
         which helps improve load times and ensures your website looks sharp on all screens.
 
-        Additionally, you can combine `srcset` with the `sizes` attribute to provide information about the image's 
+        Additionally, you can combine <em>`srcset`</em> with the <em>`sizes`</em> attribute to provide information about the image's 
         display size. This helps the browser make even more precise decisions about which image to load.
-      </p>
+      </p><br>
       
-      <h4>Creating a favicon is a common step in web development</h4>
-        <span>It's a small but important detail that can make your website more professional and recognizable.</span> 
+      <strong><span class="white-text-on-green-bkgrd">Creating a favicon is a common step in web development</span></strong><br>
+      <span class="white-text-on-green-bkgrd">It's a small but important detail that can make your website more professional and recognizable.</span> 
+      <h4>Here are some suggestions for creating and implementing a favicon:</h4>
+      <span class="steps">**Creating a Favicon**:</span><br>
+      <ol>
+        <li><span class="steps">**Image Format**:</span></li> 
+        <p>Favicons are typically in the <em>ICO</em> format. 
+        While <em>SVGs</em> are great for many web graphics, they are not recommended for favicons. 
+        You'll want to create an <em>ICO</em> file specifically for the favicon.</p>
+        
+        <li><span class="steps">**Size**:</span></li>
+        <p>Favicons should be <span class="underlined">square</span>, and a common size is <em>16x16 pixels</em> or <em>32x32 pixels</em>. You can also create larger versions for different use cases, like bookmarks and tabs.</p>
+  
+        <li><span class="steps">**Design**:</span></li> 
+        <p>Keep your favicon design simple and recognizable. It's a small graphic, so intricate details may not be visible.</p>
+      </ol>
+      <h3>**Where to Get a Favicon**:</h3>
+      <ol>
+          
+        <li><span class="steps">**Create Your Own**:</span>
+        <p>If you have graphic design skills, 
+        you can create your own favicon using graphic design software like <a href="https://www.adobe.com/products/illustrator/free-trial-download.html">Adobe Illustrator</a> or <a href="https://inkscape.org/">Inkscape</a>.</p>
     
-        <h4>Here are some suggestions for creating and implementing a favicon:</h4>
+        <li><span class="steps">**Favicon Generators**:</span> 
+        <p>There are online favicon generators that can help you create a favicon from an existing image. Online tools like <a href="https://favicon.io/favicon-generator/">Favicon.io</a> or <a href="https://realfavicongenerator.net/">RealFaviconGenerator.net</a>. These tools typically allow you to upload an image, and they will generate the necessary <em>ICO</em> file.</p>
 
-      <p class="steps">**Creating a Favicon**:</p>
-      <p class="steps">1. **Image Format**: Favicons are typically in the ICO format. 
-      While SVGs are great for many web graphics, they are not recommended for favicons. 
-      You'll want to create an ICO file specifically for the favicon.</p>
+        <li><span class="steps">**Favicon from Logo**:</span>
+        <p>If you have a logo, you can create a simplified version of it to use as a favicon. Make sure it's recognizable even at a small size.</p>
+    
+        <li><span class="steps">**Stock Icons**:</span>
+        <p>Some websites offer <strong><span class="free">free</span></strong> or <strong><span class="pay-up">paid</span></strong> favicon sets. These can be a quick way to get a professional-looking favicon if you don't have design skills.</p>
+      </ol>
+      <span class="steps"><h3>**Implementing the Favicon**:</h3></span>
+      <ol>
+        <li><p>Once you have your favicon.ico file, place it in the root directory of your website. It should be accessible at the root level, like <strong>`https://yourwebsite.com/favicon.ico`</strong>.</p></li>
   
-      <p class="steps">2. **Size**: Favicons should be square, and a common size is 16x16 pixels 
-      or 32x32 pixels. You can also create larger versions for different use cases, like bookmarks and tabs.</p>
-  
-      <p class="steps">3. **Design**: Keep your favicon design simple and recognizable. It's a small graphic, 
-      so intricate details may not be visible.</p>
-  
-      <p class="steps">**Where to Get a Favicon**:</p>
-      <p class="steps">1. **Create Your Own**:</p> If you have graphic design skills, 
-      you can create your own favicon using graphic design software like Adobe Illustrator, Inkscape, 
-      or online tools like <a href="https://favicon.io/favicon-generator/">Favicon.io</a> or RealFaviconGenerator.net.
-  
-      <p class="steps">2. **Favicon Generators**:</p> There are online favicon generators that can 
-      help you create a favicon from an existing image. These tools typically allow you to upload an image, 
-      and they will generate the necessary ICO file.
-  
-      <p class="steps">3. **Favicon from Logo**:</p> If you have a logo, you can create a simplified version 
-      of it to use as a favicon. Make sure it's recognizable even at a small size.
-  
-      <p class="steps">4. **Stock Icons**:</p> Some websites offer free or paid favicon sets. These can be 
-      a quick way to get a professional-looking favicon if you don't have design skills.
-  
-      <p class="steps">**Implementing the Favicon**:</p>
-      <p class="steps">1. Once you have your favicon.ico file, place it in the root directory of your website. 
-        It should be accessible at the root level, like `https://yourwebsite.com/favicon.ico`.</p>
-  
-      2. Add the following code to your HTML's ` <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">head</span><span class="punctuation">&gt;</span></span> ` section, typically in your `home.html` or a shared template file:
-  
-      ```html
-      <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">link</span>&nbsp;<span class="property">rel</span><span class="punctuation">&#61;&quot;</span><span class="property-values">icon</span><span class="punctuation">&quot;&nbsp;</span><span class="property">href</span><span class="punctuation">&#61;&quot;&sol;</span><span class="property-values">favicon.ico</span><span class="punctuation">&quot;&nbsp;</span><span class="property">type</span><span class="punctuation">&#61;&quot;</span><span class="property-values">image/x-icon</span><span class="punctuation">&quot;&gt;</span></span>
-      ```
-  
-      3. Test your website in different browsers to ensure that the favicon is displayed correctly.
-  
-      Remember to keep the favicon simple, and make sure it's related to your website's branding or content. 
+        <li><span class="steps">Add the following code to your HTML's ` <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">head</span><span class="punctuation">&gt;</span></span> `section':</span><br>
+        Typically in your <em>`home.html`</em> or a shared template file: 
+        <span class="code-line-background"><span class="punctuation">&lt;</span><span class="element-name">link</span>&nbsp;<span class="property">rel</span><span class="punctuation">&#61;&quot;</span><span class="property-values">icon</span><span class="punctuation">&quot;&nbsp;</span><span class="property">href</span><span class="punctuation">&#61;&quot;&sol;</span><span class="property-values">favicon.ico</span><span class="punctuation">&quot;&nbsp;</span><span class="property">type</span><span class="punctuation">&#61;&quot;</span><span class="property-values">image/x-icon</span><span class="punctuation">&quot;&gt;</span></span></li>
+       
+        <li><span class="steps">Test your website in different browsers</span><br>
+        This will ensure that the favicon is displayed correctly.</li><br>
+      </ol>
+      <span class="steps"><em>Remember to keep the favicon simple, and make sure it's related to your website's branding or content. 
       A well-designed favicon can help users easily identify your website when they have multiple tabs or bookmarks open.
-      </p>
+      </em></span>
     
     </main>
   </body>
