@@ -14,6 +14,7 @@ body {
   padding: 1vh 5vw;
   background-color: var(--site-default-main-bg-color);
   color: var(--site-default-main-text-color);
+  text-align: left;
 }
 figure {
   display: block;
@@ -39,6 +40,16 @@ figcaption {
 ul {
   list-style: none;
 }
+pre {
+  width: 90%;
+}
+#outline-style {
+text-align: left;
+}
+.topics {
+  width: 85vw;
+  margin: 15px auto;
+}
 .logo {
   display: inline-block;
   width: 100px;
@@ -50,7 +61,6 @@ ul {
 }
 .header {
   display: flex;
-  align-items: center;
   color: var(--site-default-head-foot-text-color);
   background-color: var(--site-default-head-foot-bg-color); /* Background color */
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
@@ -182,6 +192,15 @@ ul {
 }
 .pay-up {
   background-color: #cc5460;
+}
+.summary-text {
+  font-style: italic;
+  font-weight: 600;
+  
+}
+.summary-text-bkgrd {
+  background-color: #9ed8da;
+  padding: 10px;
 }
 @media screen and (max-width: 420px) {
   /* adjustemts for smaller screens */
