@@ -58,35 +58,37 @@ figcaption {
   display: inline-block;
   text-decoration: underline;
   font-size: 3.3vw;
-  margin-right:20px;
+  margin-right: 20px;
+}
+.nav {
+  display: flex;
+  flex-direction: column; /* This puts contents in a column*/
+  align-items: center; /* centers the items horizontally because they are in a column, would be vertically if the flex direction was a row*/
 }
 #side-menu {
-  position: fixed;
   font-family: 'sans-serif';
-  top: 25%;
-  left: -250px; /* Hidden by default */
-  width: 250px; /* Adjust width as needed */
-  height: 51%; /* Maximum height when fully expanded */
-  transition: left 0.3s; /* Smooth sliding animation */
+  font-size: 1.4em;
+  line-height: 1.3;
+  padding: 1px 3px 2px 3px;
+  width: 250px; /* Adjust width as needed if any menu items are too lengthy*/
+  height: 0px; /* intital height set to hide the menu and should be changed with js on mouse hover over the menu tab */
+  overflow: hidden; /* This hides the content inside the menu while it is collapsed*/
   border-radius: 5px;
-  padding: 1vh -2vw 1vh 3vw;
-  border-right: 3px solid var(--site-default-head-foot-text-color);
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
-  right: 0;
+  margin-top: -1px; /* This distance is needed to hug the menu container to the header. it's actually over lapping a little */
+  z-index: -1; /* This is used to hide the overlap by making it set under the header. I this so when menu is collapsed, it will definitly be hidden behind header.*/
 }
 .rotated-text-container { /* This is the side menu tab */
-  position: absolute;
-  top: 40%; /* asjust this to adjust the loction of the menu tag from the top */
-  left: 95%;
-  transform: translate(0%, -50%) rotate(-90deg);
-  font-size: 21px; /* Adjust the font size as needed */
-  padding: -1px 5px 0px 5px; /* Add padding to style the rotated text */
+  margin-top: 0px; /* set to hug bottom of the menu */
+  width: 74px;
+  font-size: 21px; 
+  padding: 1px 5px 1px 5px; /* Add padding just to keep text off the inside walls of the container */
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
-  left: 230px;
 }
 /* These are the colors for the simulated code displays */
 .line-numbers {
@@ -163,16 +165,37 @@ figcaption {
   font-size: 1.8vw;
   margin-left: 50px;
   margin-top: 0px;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 420px) {
   /* adjustemts for smaller screens */
   figure {
     width: 80%;
   }
+  #side-menu {
+    position: fixed;
+    top: 100px; /* Adjust this value as needed */
+    /* Other styling properties */
+  }  .rotated-text-container {
+    position: absolute;
+    top: 75px; /* Adjust this value as needed */
+    /* Other styling properties */
+  }
 }
 @media screen and (max-width: 290px) {
   /* adjustemts for smaller screens */
   figure {
-    width: 75%;
+    width: 60%;
+  }  
+  #side-menu {
+    position: fixed;
+    top: 14%; /* Adjust this value as needed */
+    /* Other styling properties */
+  }
+
+  .rotated-text-container {
+    position: absolute;
+    top: 18%; /* Adjust this value as needed */
+    /* Other styling properties */
   }
 }
