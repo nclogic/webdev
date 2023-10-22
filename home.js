@@ -1,28 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sideMenu = document.getElementById('side-menu');
-  
-  // Function to show the menu
-  const showMenu = () => {
-    sideMenu.style.left = '0';
-  };
+  const menuTab = document.querySelector('.rotated-text-container');
+  let isMenuOpen = false;
 
-  // Function to hide the menu
-  const hideMenu = () => {
-    sideMenu.style.left = '-250px';
-  };
-
-  // Mouseover event for desktop
-  sideMenu.addEventListener('mouseover', showMenu);
-
-  // Mouseout event for desktop
-  sideMenu.addEventListener('mouseout', hideMenu);
-
-  // Click event for touch devices
-  sideMenu.addEventListener('click', () => {
-    if (sideMenu.style.left === '0px') {
-      hideMenu();
+  // Function to toggle the menu
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      sideMenu.style.height = '0px';
+      sideMenu.style.overflow = 'hidden';
+      sideMenu.style.zIndex = '-1';
+      sideMenu.style.borderColor = 'none';
     } else {
-      showMenu();
+      sideMenu.style.height = 'auto';
+      sideMenu.style.zIndex = '1';
+      sideMenu.style.borderTop = '2px solid var(--site-default-head-foot-text-color)';
+    }
+    isMenuOpen = !isMenuOpen;
+  };
+
+  // Mouseenter event for desktop
+  menuTab.addEventListener('mouseenter', () => {
+    if (!isMenuOpen) {
+      toggleMenu();
+    }
+  });
+  sideMenu.addEventListener('mouseenter', () => {
+    if (!isMenuOpen) {
+      toggleMenu();
+    }
+  });
+
+  // Mouseleave event for desktop
+  sideMenu.addEventListener('mouseleave', () => {
+    if (isMenuOpen) {
+      toggleMenu();
     }
   });
 });
