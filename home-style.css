@@ -74,7 +74,6 @@ figcaption {
   width: 250px; /* Adjust width as needed if any menu items are too lengthy*/
   height: 0px; /* intital height set to hide the menu and should be changed with js on mouse hover over the menu tab */
   overflow: hidden; /* This hides the content inside the menu while it is collapsed*/
-  border-radius: 5px;
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
   margin-top: -1px; /* This distance is needed to hug the menu container to the header. it's actually over lapping a little */
