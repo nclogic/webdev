@@ -66,6 +66,7 @@ figcaption {
   align-items: center; /* centers the items horizontally because they are in a column, would be vertically if the flex direction was a row*/
 }
 #side-menu {
+  position: fixed;
   font-family: 'sans-serif';
   font-size: 1.4em;
   line-height: 1.3;
