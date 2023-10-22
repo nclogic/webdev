@@ -16,7 +16,7 @@
       <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div>
       <div class="header-title"><h1>Beginner HTML/CSS & JavaScript Reference Site</h1></div>
     </header>
-    <nav> <!-- I decided to make the navigation menu as a slideout menu with a tab to hover over to activate it. -->
+    <nav class=" nav"> <!-- I decided to make the navigation menu as a slideout menu with a tab to hover over to activate it. -->
       <div class="menu-div" id="side-menu">
         <ul class="nav-menu-list">
           <li class="nav-menu-list-item">
@@ -28,11 +28,14 @@
           <li class="nav-menu-list-item">
             <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
           </li>
-          <div class="rotated-text-container"> <!-- This is the menu tab -->
-            <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
-          </div>
+          <li>
+            <a href="#">last line</a>
+          </li>
         </ul>
       </div>
+      <div class="rotated-text-container"> <!-- This is the menu tab -->
+        <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
+      </div>                  
     </nav>
     <main class="main">
       <div class="topic"><h2>The Basic Html Layout</h2></div> <!-- A section topic -->
@@ -85,6 +88,7 @@
           <span class="line-numbers">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">margin-bottom</span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">40</span><span class="unit">px</span></span><span class=" punctuation">&#59;</span><br>
           <span class="line-numbers">15&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&rcub;</span>
         </figure>
+      </div>
       <div class="topic"><h3>A good website follows these guidlines:</h3></div>    
       <article class="article">
           - The page has a <span class="emphasis">DOCTYPE</span> declaration, a <span class="emphasis">lang</span> attribute, and a <span class="emphasis">head</span> and <span class="emphasis">body</span> section.<br>
