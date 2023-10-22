@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sideMenu.style.height = '0px';
       sideMenu.style.overflow = 'hidden';
       sideMenu.style.zIndex = '-1';
-      sideMenu.style.borderColor = 'none';
     } else {
       sideMenu.style.height = 'auto';
       sideMenu.style.zIndex = '1';
-      sideMenu.style.borderTop = '2px solid var(--site-default-head-foot-text-color)';
     }
     isMenuOpen = !isMenuOpen;
   };
