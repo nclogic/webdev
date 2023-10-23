@@ -1,3 +1,4 @@
+/* Variable definitions for color schemes */
 :root {
   --site-default-main-bg-color: #e9f8ea;
   --site-default-main-text-color: black;
@@ -6,78 +7,48 @@
   --site-default-imortant-text-color : #cc5460;
   --site-default-menu-panel-bg-color: #bcda9ae6;
 }
-body {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
+/* Styling for the body element */
+body { 
+  margin: 0; /* This sets the margins for the entire page to 0 so that there are no visible edges around the screen and any margins set by child elements can be referenced from the edge.*/
+  max-width: 100%; /* This sets the max width of the main page container (the body) size of the viewport and does not underlay past the edges of the screen.*/
+  height: auto; /* This sets the height of the body container to what ever is needed to fit the content Displaying a vertical scroll bar if content projects past the bottom of the window.*/
   display: block;
-  padding: 1vh 5vw;
+  padding: 1vh 5vw; /* This applies internal padding (space) around the inside edge of the body container. This could also be done using margin on any child containers placed inside the body, but this is more consistant*/
   background-color: var(--site-default-main-bg-color);
   color: var(--site-default-main-text-color);
   text-align: left;
 }
+/* Styling for figure elements */
 figure {
-  display: block;
-  justify-content: center;
+  display: block;  
+  justify-content: center; /* Center figure horizontally within its container */
   width: 88%;
-  align-items: center;
+  align-items: center; /* Center figure vertically within its container */
   border: 3px solid rgb(97, 94, 94);
   background-color: rgb(22, 21, 21);
   font-family: Georgia, Times, serif;
   letter-spacing: 1px;
   line-height: 2vw;
   overflow: auto;
-  text-wrap: nowrap;
+  text-wrap: nowrap; /* Prevent text from wrapping */
   padding: 2vh 0vw 3vh 3vw ;
   font-size: 1.3vw;
   margin-bottom: 30px;
 }
+/* Styling for figure captions */
 figcaption {
   font-size: 1.7vw;
   margin-top: -20px;
   margin-left: 40px;
 }
+/* Remove default bullet points for lists */
 ul {
   list-style: none;
-}
-pre {
-  width: 90%;
 }
 #outline-style {
 text-align: left;
 }
-.topics {
-  width: 85vw;
-  margin: 15px auto;
-}
-.logo {
-  display: inline-block;
-  width: 100px;
-  margin-left: 20px;
-  margin-top: 5px;
-}
-.logo-img {
-  border-radius: 7px;
-}
-.header {
-  display: flex;
-  color: var(--site-default-head-foot-text-color);
-  background-color: var(--site-default-head-foot-bg-color); /* Background color */
-  border-bottom: 3px solid var(--site-default-head-foot-text-color);
-  border-radius: 10px;
-}
-.header-title h1 {
-  display: inline-block;
-  text-decoration: underline;
-  font-size: 3.3vw;
-  margin-right: 20px;
-}
-.nav {
-  display: flex;
-  flex-direction: column; /* This puts contents in a column*/
-  align-items: center; /* centers the items horizontally because they are in a column, would be vertically if the flex direction was a row*/
-}
-#side-menu {
+#menu-box {
   position: fixed;
   font-family: 'sans-serif';
   font-size: 1.4em;
@@ -90,6 +61,46 @@ text-align: left;
   margin-top: -1px; /* This distance is needed to hug the menu container to the header. it's actually over lapping a little */
   z-index: -1; /* This is used to hide the overlap by making it set under the header. I this so when menu is collapsed, it will definitly be hidden behind header.*/
 }
+.topics {
+  width: 85vw;
+  margin: 15px auto;
+}
+.logo {
+  display: block;
+  align-self: center;
+  justify-self: center;
+  height: 64px;
+}
+.logo-img {
+  align-self: center;
+  border-radius: 7px;
+}
+.header {
+  display: grid; /* This enables elements to coexist on the same line as other child elements*/
+  grid-template-columns: 1fr 9fr;
+  color: var(--site-default-head-foot-text-color);
+  background-color: var(--site-default-head-foot-bg-color); /* Background color */
+  border-bottom: 3px solid var(--site-default-head-foot-text-color);
+  border-radius: 10px;
+}
+.header-title h1 {
+  display: block; /* Makes the element act as inline-level blocks, allowing them to flow horizontally alongside other elements.*/
+  text-decoration: underline;
+  font-size: 3.4vw;
+  text-align: center;
+  margin-left: -64px;
+}
+.subject {
+  display: block;
+  text-align: center;
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+.nav {
+  display: flex;
+  flex-direction: column; /* This puts contents in a column*/
+  align-items: center; /* centers the items horizontally because they are in a column, would be vertically if the flex direction was a row*/
+}
 .underlined {
   text-decoration: underline;
 }
@@ -99,7 +110,8 @@ text-align: left;
   line-height: 1.3;
   padding: 2px 2px;
 }
-.rotated-text-container { /* This is the side menu tab */
+/* This is styling for the menu tab */
+.menu-title-tab { 
 
   margin-top: 0px; /* set to hug bottom of the menu */
   width: 74px;
@@ -108,8 +120,8 @@ text-align: left;
   border-bottom: 3px solid var(--site-default-head-foot-text-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: var(--site-default-menu-panel-bg-color); /* Background color */
-  color: var(--site-default-head-foot-text-color); /* Text color */
+  background-color: var(--site-default-menu-panel-bg-color); 
+  color: var(--site-default-head-foot-text-color); 
 }
 /* These are the colors for the simulated code displays */
 .line-numbers {
@@ -207,14 +219,18 @@ text-align: left;
   figure {
     width: 80%;
   }
-  #side-menu {
+  #menu-box {
     position: fixed;
     top: 100px; /* Adjust this value as needed */
     /* Other styling properties */
-  }  .rotated-text-container {
+  }  
+  .menu-title-tab {
     position: absolute;
     top: 75px; /* Adjust this value as needed */
     /* Other styling properties */
+  }
+  .header-title h1 {
+    margin-left: -32px;
   }
 }
 @media screen and (max-width: 290px) {
@@ -222,13 +238,15 @@ text-align: left;
   figure {
     width: 60%;
   }  
-  #side-menu {
+  #menu-box {
     position: fixed;
     top: 14%; /* Adjust this value as needed */
     /* Other styling properties */
   }
-
-  .rotated-text-container {
+  .header-title h1 {
+    margin-left: -5px;
+  }
+  .menu-title-tab {
     position: absolute;
     top: 18%; /* Adjust this value as needed */
     /* Other styling properties */
