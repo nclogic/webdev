@@ -1,254 +1,103 @@
-/* Variable definitions for color schemes */
-:root {
-  --site-default-main-bg-color: #e9f8ea;
-  --site-default-main-text-color: black;
-  --site-default-head-foot-bg-color: #bcda9a;
-  --site-default-head-foot-text-color: #075a0e;
-  --site-default-imortant-text-color : #cc5460;
-  --site-default-menu-panel-bg-color: #bcda9ae6;
-}
-/* Styling for the body element */
-body { 
-  margin: 0; /* This sets the margins for the entire page to 0 so that there are no visible edges around the screen and any margins set by child elements can be referenced from the edge.*/
-  max-width: 100%; /* This sets the max width of the main page container (the body) size of the viewport and does not underlay past the edges of the screen.*/
-  height: auto; /* This sets the height of the body container to what ever is needed to fit the content Displaying a vertical scroll bar if content projects past the bottom of the window.*/
-  display: block;
-  padding: 1vh 5vw; /* This applies internal padding (space) around the inside edge of the body container. This could also be done using margin on any child containers placed inside the body, but this is more consistant*/
-  background-color: var(--site-default-main-bg-color);
-  color: var(--site-default-main-text-color);
-  text-align: left;
-}
-/* Styling for figure elements */
-figure {
-  display: block;  
-  justify-content: center; /* Center figure horizontally within its container */
-  width: 88%;
-  align-items: center; /* Center figure vertically within its container */
-  border: 3px solid rgb(97, 94, 94);
-  background-color: rgb(22, 21, 21);
-  font-family: Georgia, Times, serif;
-  letter-spacing: 1px;
-  line-height: 2vw;
-  overflow: auto;
-  text-wrap: nowrap; /* Prevent text from wrapping */
-  padding: 2vh 0vw 3vh 3vw ;
-  font-size: 1.3vw;
-  margin-bottom: 30px;
-}
-/* Styling for figure captions */
-figcaption {
-  font-size: 1.7vw;
-  margin-top: -20px;
-  margin-left: 40px;
-}
-/* Remove default bullet points for lists */
-ul {
-  list-style: none;
-}
-#outline-style {
-text-align: left;
-}
-#menu-box {
-  position: fixed;
-  font-family: 'sans-serif';
-  font-size: 1.4em;
-  line-height: 1.3;
-  width: 250px; /* Adjust width as needed if any menu items are too lengthy*/
-  height: 0px; /* intital height set to hide the menu and should be changed with js on mouse hover over the menu tab */
-  overflow: hidden; /* This hides the content inside the menu while it is collapsed*/
-  background-color: var(--site-default-menu-panel-bg-color); /* Background color */
-  color: var(--site-default-head-foot-text-color); /* Text color */
-  margin-top: -1px; /* This distance is needed to hug the menu container to the header. it's actually over lapping a little */
-  z-index: -1; /* This is used to hide the overlap by making it set under the header. I this so when menu is collapsed, it will definitly be hidden behind header.*/
-}
-.topics {
-  width: 85vw;
-  margin: 15px auto;
-}
-.logo {
-  display: block;
-  align-self: center;
-  justify-self: center;
-  height: 64px;
-}
-.logo-img {
-  align-self: center;
-  border-radius: 7px;
-}
-.header {
-  display: grid; /* This enables elements to coexist on the same line as other child elements*/
-  grid-template-columns: 1fr 9fr;
-  color: var(--site-default-head-foot-text-color);
-  background-color: var(--site-default-head-foot-bg-color); /* Background color */
-  border-bottom: 3px solid var(--site-default-head-foot-text-color);
-  border-radius: 10px;
-}
-.header-title h1 {
-  display: block; /* Makes the element act as inline-level blocks, allowing them to flow horizontally alongside other elements.*/
-  text-decoration: underline;
-  font-size: 3.4vw;
-  text-align: center;
-  margin-left: -64px;
-}
-.subject {
-  display: block;
-  text-align: center;
-  font-size: 1.5vw;
-  text-decoration: underline;
-}
-.nav {
-  display: flex;
-  flex-direction: column; /* This puts contents in a column*/
-  align-items: center; /* centers the items horizontally because they are in a column, would be vertically if the flex direction was a row*/
-}
-.underlined {
-  text-decoration: underline;
-}
-.white-text-on-green-bkgrd {
-  color: antiquewhite;
-  background-color: darkgreen;
-  line-height: 1.3;
-  padding: 2px 2px;
-}
-/* This is styling for the menu tab */
-.menu-title-tab { 
-
-  margin-top: 0px; /* set to hug bottom of the menu */
-  width: 74px;
-  font-size: 21px; 
-  padding: 1px 5px 1px 5px; /* Add padding just to keep text off the inside walls of the container */
-  border-bottom: 3px solid var(--site-default-head-foot-text-color);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: var(--site-default-menu-panel-bg-color); 
-  color: var(--site-default-head-foot-text-color); 
-}
-/* These are the colors for the simulated code displays */
-.line-numbers {
-  color:gray;
-}
-.topic {
-  font-size: 2.6vw;
-  text-align: center; /* Center the text horizontally */
-  line-height: 1;
-  margin-bottom: 0;
-}
-.doctype {
-  color: rgb(238, 17, 17);
-}
-.punctuation {
-  color: white;
-}
-.text {
-  color: whitesmoke;
-}
-.property{
-  color: green;
-}
-.property-values {
-  color: orange;
-}
-.element-name {
-  color: rgb(204, 10, 10);
-}
-.c-class {
-  color: green;
-}
-.c-text {
-  color:rgb(37, 117, 163);
-}
-.base-selector {
-  color: red;
-}
-.number {
-  color:rgb(189, 37, 189);
-}
-.unit {
-  color: rgb(199, 23, 23);
-}
-.steps {
-  font-weight: 600;
-}
-.code-line-background {
-  background-color: black;
-}
-.text-h1 {
-  color: whitesmoke;
-  font-size: 1.6em; /* Relative to the surrounding text (1.3vw), this makes it larger */
-}
-.text-h2 {
-  color: whitesmoke;
-  font-size: 1.4em; /* Slightly smaller than h1 */
-}
-.text-h3 {
-  color: whitesmoke;
-  font-size: 1.2em; /* Smaller than h2 */
-}
-.text-em {
-  color: whitesmoke;
-  font-style: italic; /* Makes the text italic */
-  font-weight: normal; /* Ensures the text is not bold */
-}
-.emphasis {
-  font-style: italic; /* Makes the text italic */
-  font-weight: 600;
-}
-.article {
-  font-size: 1.8vw;
-  margin-left: 50px;
-  margin-top: 0px;
-  margin-bottom: 15px;
-}
-.free {
-  background-color: rgb(116, 233, 105);
-}
-.pay-up {
-  background-color: #cc5460;
-}
-.summary-text {
-  font-style: italic;
-  font-weight: 600;
-  
-}
-.summary-text-bkgrd {
-  background-color: #9ed8da;
-  padding: 10px;
-}
-@media screen and (max-width: 420px) {
-  /* adjustemts for smaller screens */
-  figure {
-    width: 80%;
-  }
-  #menu-box {
-    position: fixed;
-    top: 100px; /* Adjust this value as needed */
-    /* Other styling properties */
-  }  
-  .menu-title-tab {
-    position: absolute;
-    top: 75px; /* Adjust this value as needed */
-    /* Other styling properties */
-  }
-  .header-title h1 {
-    margin-left: -32px;
-  }
-}
-@media screen and (max-width: 290px) {
-  /* adjustemts for smaller screens */
-  figure {
-    width: 60%;
-  }  
-  #menu-box {
-    position: fixed;
-    top: 14%; /* Adjust this value as needed */
-    /* Other styling properties */
-  }
-  .header-title h1 {
-    margin-left: -5px;
-  }
-  .menu-title-tab {
-    position: absolute;
-    top: 18%; /* Adjust this value as needed */
-    /* Other styling properties */
-  }
-}
+<!DOCTYPE html>
+<html lang="en"> <!-- html is the start of the document, en is the Language the document is written for -->
+  <head> <!-- The head section holds all the things needed to initialize the envoirnment that will display the website-->
+    <meta charset="UTF-8" content="UTF-8"> <!-- This tells the browswer what character set to use to display characters properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the initial viewport width based on initial window size -->
+    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site"> <!-- Something for search engines to use -->
+    <title>Beginner Web Development Reference Site</title> <!-- The title displayed on browser tab -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"><!-- This contains the icon displayed on browser tab -->
+    <link rel="stylesheet" href="green-color-style.css" id="color-style-sheet"> <!-- This is the default color scheme and handles most color styles for the page. -->
+    <link rel="stylesheet" href="common-style.css" id="common-style"> <!-- This is for styles common to all pages except color.  -->
+    <link rel="stylesheet" href="home-style.css" id="specific-style"> <!-- This contains styling specific to this page. -->
+    <script src="home.js"></script> <!-- JavaScript file --><!--Currently all files will be in same directory until I figure out how to create additional ones here -->
+  </head> <!-- The end of the head section -->
+  <body class="body"> <!-- The beginning of the body section. The body section is where all of the page content resides. It usually takes the class of 'body'-->
+    <header class="header"> <!-- This is the beginning of the Header Section. The header section holds all things header related. It usually takes the class of 'header'-->
+      <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div> <!-- Logo image for the header. Currenlty this  is Temporary. Logo Images typically run 200px x 50px-->
+      <div class="header-title"><h1>Beginner HTML/CSS & JavaScript Reference</h1></div> <!-- This is the Title for the document, It sits in the header with the logo -->
+    </header> <!-- The end of the header section. The header is in it's own secion to make styling and placing it easer to manage.-->
+    <nav class=" nav"> <!-- This is the navigation menu section it holds all things menu related -->
+      <div class="menu-div" id="menu-box"> <!-- This division within the nav section holds the menu box which holds all list items for navigating the site -->
+        <ul class="nav-menu-list"> <!-- This is an un-ordered list of menu link items -->
+          <li class="nav-menu-list-item"> <!-- A list item like all of the rest in this list. each one holds a link -->
+            <a class="site-page-links" id="home-page-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="outline-page-link" href="outline.html">Typical Outline Guide</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="definitions-page-link" href="definitions.html">Definitions</a> 
+          </li>
+        </ul> <!-- This is the end of the menu items list -->
+      </div> <!-- This is the division that holds all things related to the menu tab. The menu is hidden by default and is shown by a mouse hover over this tab as defined in the javascript file.-->
+      <div class="menu-title-tab" id="menu-tab"> <!-- This is the menu tab -->
+        <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
+      </div> <!-- The end of the menu tab division -->              
+    </nav> <!-- The end of the nav section -->
+    <main class="main"> <!-- This is the beginning of the main section. The main section is where all things other than the header, nav menu and footer reside -->
+      <div class="topic"><h2>The Basic Html Layout</h2></div> <!-- This dicision holds the first section topic. It is in it's own div for ease of mangement -->
+      <figcaption>home.html</figcaption> <!-- This is a caption for the following content which simutaes a block of HTML code, the 'figcaption' element is typically used in conjunction with the 'figure' element -->
+      <div class="code-block"> <!-- This division holds the block of simulated code -->
+        <figure class="html-code-block"> <!-- The 'figure' element is used in conjustion with the 'figcaption' element -->
+          <span class="line-numbers">&nbsp;&nbsp;1</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="punctuation">&excl;</span><span class="doctype">DOCTYPE</span>&nbsp;<span class="property-values">html</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;2</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">html</span>&nbsp<span class="property">lang</span><span class="punctuation">&#61;&quot;</span><span class="property-values">en</span><span class="punctuation">&quot;&colon;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;3</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">head</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">meta</span>&nbsp;<span class="property">charset</span><span class="punctuation">&#61;</span><span class="punctuation">&quot;</span><span class="property-values">UTF-8</span><span class="punctuation">&quot;</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">meta</span>&nbsp;<span class="property">name</span><span class="punctuation">&#61;</span><span class="punctuation">&quot;</span><span class="property-values">viewport</span><span class="punctuation">&quot;</span>&nbsp;<span class="property">content</span><span class="punctuation">&#61;&quot;</span><span class="property-values">width=device-width</span><span class="punctuation">&comma;&nbsp;</span><span class="property-values">initial-scale=1.0</span><span class="punctuation">&quot;&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">meta</span>&nbsp;<span class="property">http-equiv</span><span class="punctuation">&#61;</span><span class="punctuation">&quot;</span><span class="property-values">X-UA-Compatible</span><span class="punctuation">&quot;</span>&nbsp;<span class="property">content</span><span class="punctuation">&#61;&quot;</span><span class="property-values">ie=edge</span><span class="punctuation">&quot;&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">link</span>&nbsp;<span class="property">rel</span><span class="punctuation">&#61;</span><span class="punctuation">&quot;</span><span class="property-values">stylesheet</span><span class="punctuation">&quot;</span>&nbsp;<span class="property">href</span><span class="punctuation">&#61;&quot;</span><span class="property-values">/css/styles.css</span><span class="punctuation">&quot;&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">script</span>&nbsp;<span class="property">src</span><span class="punctuation">&#61;</span><span class="punctuation">&quot;</span><span class="property-values">/js/home.js</span><span class="punctuation">&quot;</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">&nbsp;&nbsp;9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">title</span><span class="punctuation">&gt;</span><span class="text">Document</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">title</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">10&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">head</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">11&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">body</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">h1</span>&nbsp;<span class="property">Class</span><span class="punctuation">&#61;&quot;</span><span class="property-values">.header</span><span class="punctuation">&quot;</span><span class="punctuation">&gt;</span></span><span class="text-h1">This is a first level heading in HTML.</span><span class="punctuation">&lt;&sol;</span><span class="element-name">h1</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">h2</span><span class="punctuation">&gt;</span></span><span class="text-h2">This is a second level heading in HTML.</span><span class="punctuation">&lt;&sol;</span><span class="element-name">h2</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">h3</span><span class="punctuation">&gt;</span></span><span class="text-h3">This is a third level heading in HTML.</span><span class="punctuation">&lt;&sol;</span><span class="element-name">h3</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">p</span><span class="punctuation">&gt;</span></span><span class="text">This is a </span><span class="punctuation">&lt;</span><span class="element-name">em</span><span class="punctuation">&gt;</span><span class="text-em">paragragh</span><span class="punctuation">&lt;&sol;</span><span class="element-name">em</span><span class="punctuation">&gt;</span><span class="text"> with an empahisis on the word "paragraph".</span><span class="punctuation">&lt;&sol;</span><span class="element-name">p</span><span class="punctuation">&gt;</span><br>
+          <span class="line-numbers">16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">p</span><span class="punctuation">&gt;</span></span><span class="text">The main essence of this Website is to:</span><span class=" tag"><span class=" tag"><span class="punctuation">&lt;/</span>p</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">ul</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">li</span><span class="punctuation">&gt;</span><span class="text">Show you how to format a web document with HTML</span><span class="punctuation">&lt;&sol;</span><span class="element-name">li</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">li</span><span class="punctuation">&gt;</span><span class="text">Show you how to design a web page with CSS</span><span class="punctuation">&lt;&sol;</span><span class="element-name">li</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;</span><span class="element-name">li</span><span class="punctuation">&gt;</span><span class="text">Show you how to program a web document with JavaScript</span><span class="punctuation">&lt;&sol;</span><span class="element-name">li</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;/</span><span class="element-name">ul</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">22</span><br>
+          <span class="line-numbers">23&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">body</span><span class="punctuation">&gt;</span></span><br>
+          <span class="line-numbers">24&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">html</span><span class="punctuation">&gt;</span></span><br>            
+        </figure> <!-- The end of the simulated code, All of the elements, classes and any id's used in the above text is for styling in order to color the text similar to how an IDE would display it -->
+      </div> <!-- The end of the simulated HTML code block division -->
+      <div class="topic"><h2>The basic CSS stylesheet</h2></div> <!-- A division holding the topic for the second simulated code block -->
+      <figcaption>style.css</figcaption> <!-- The caption for the CSS simulated code block -->
+      <div class="codeBlock"> <!-- The division holding the CSS simulated code block -->
+        <figure class="css-code-block"> <!-- the figure element that holds the actual simulated code text -->
+          <span class="line-numbers">&nbsp;1&nbsp;&nbsp;&nbsp;</span><span class="base-selector">body </span><span class=" punctuation">&lcub;</span><br>
+          <span class="line-numbers">&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">display</span><span class=" punctuation">&colon;</span><span class="c-text"> block</span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-text">border</span><span class=" punctuation">&colon;</span><span class="c-text"><span class="number">3</span><span class="unit">px</span> solid grey</span></span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-text">background-color</span></span><span class=" punctuation">&colon;</span><span class="c-text"> black</span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">font-family</span><span class=" punctuation">&colon;</span><span class="c-text"> Georgia</span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">font-size</span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">1.4</span><span class="unit">vw</span></span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">&nbsp;7&nbsp;&nbsp;&nbsp;</span><span class=" punctuation">&rcub;</span><br>
+          <span class="line-numbers">&nbsp;8</span><br>
+          <span class="line-numbers">&nbsp;9&nbsp;&nbsp;&nbsp;</span><span class="c-class">.header </span><span class=" punctuation">&lcub;</span><br>
+          <span class="line-numbers">10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">font-size</span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">2.6</span><span class="unit">vw</span></span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">text-align</span><span class=" punctuation">&colon;</span><span class="c-text"> center</span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">line-height</span></span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">1</span></span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">font-family</span><span class=" punctuation">&colon;</span><span class="c-text"> Georgia</span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">margin-bottom</span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">40</span><span class="unit">px</span></span><span class=" punctuation">&#59;</span><br>
+          <span class="line-numbers">15&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&rcub;</span>
+        </figure> <!-- The end of the CSS code text -->
+      </div> <!-- The end of the Css code block division -->
+      <div class="topic"><h3>A good website follows these guidlines:</h3></div> <!-- A division holding the topic for the next section --> 
+      <article class="article"> <!-- An 'article' element holding the summary for the above figures. Typically 'article' elements are used for content intended on sharing. I felt this was a nice short, informative sharable piece, so that is why I used the 'article' tag as opposed to a div or even a paragrapgh tag <p> -->
+          - The page has a <span class="emphasis">DOCTYPE</span> declaration, a <span class="emphasis">lang</span> attribute, and a <span class="emphasis">head</span> and <span class="emphasis">body</span> section.<br>
+          - The page uses <span class="emphasis">meta</span> tags to specify the character encoding, the viewport, and the compatibility mode.<br>
+          - The page links to an external <span class="emphasis">stylesheet</span> and a <span class="emphasis">script</span> file using the <span class="emphasis">link</span> and <span class="emphasis">script</span> tags.<br>
+          - The page uses <span class="emphasis">headings</span>, <span class="emphasis">paragraphs</span>, <span class="emphasis">emphasis</span>, <span class="emphasis">lists</span>, and <span class="emphasis">links</span> to format the content.<br>
+          - The page uses <span class="emphasis">classes</span> and <span class="emphasis">selectors</span> to apply styles to the elements.<br>
+          - The page follows the <span class="emphasis">indentation</span> and <span class="emphasis">spacing</span> conventions for HTML, CSS and JavaScript.<br>
+      </article> <!-- The end of the article text. You will notice I used some HTML formating similar to the code text for extra styling within sentences -->
+    </main> <!-- The end of the main section -->
+  </body> <!-- The end of the body section -->
+</html> <!-- the end of the document -->
