@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- html is the start of the document, en is the Language the document is written for -->
+  <head> <!-- The head section holds all the things needed to initialize the envoirnment that will display the website-->
+    <meta charset="UTF-8" content="UTF-8"> <!-- This tells the browswer what character set to use to display characters properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the initial viewport width based on initial window size -->
+    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site"> <!-- Something for search engines to use -->
+    <title>Web Development Reference Definitions page</title> <!-- The title displayed on browser tab -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"><!-- This contains the icon displayed on browser tab -->
+    <link rel="stylesheet" href="green-color-style.css" id="color-style-sheet"> <!-- This is the default color scheme and handles most color styles for the page. -->
+    <link rel="stylesheet" href="common-style.css" id="common-style"> <!-- This is for styles common to all pages except color.  -->
+    <link rel="stylesheet" href="home-style.css" id="specific-style"> <!-- This contains styling specific to this page. -->
+    <script src="home.js"></script> <!-- JavaScript file --><!--Currently all files will be in same directory until I figure out how to create additional ones here -->
+  </head> <!-- The end of the head section -->
+  <body class="body"> <!-- The beginning of the body section. The body section is where all of the page content resides. It usually takes the class of 'body'-->
+    <header class="header"> <!-- This is the beginning of the Header Section. The header section holds all things header related. It usually takes the class of 'header'-->
+      <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div> <!-- Logo image for the header. Currenlty this  is Temporary. Logo Images typically run 200px x 50px-->
+      <div class="header-title"><h1>Web Development Reference Definitions page</h1></div> <!-- This is the Title for the document, It sits in the header with the logo -->
+    </header> <!-- The end of the header section. The header is in it's own secion to make styling and placing it easer to manage.-->
+    <nav class=" nav"> <!-- This is the navigation menu section it holds all things menu related -->
+      <div class="menu-div" id="menu-box"> <!-- This division within the nav section holds the menu box which holds all list items for navigating the site -->
+        <ul class="nav-menu-list"> <!-- This is an un-ordered list of menu link items -->
+          <li class="nav-menu-list-item"> <!-- A list item like all of the rest in this list. each one holds a link -->
+            <a class="site-page-links" id="home-page-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="outline-page-link" href="outline.html">Typical Outline Guide</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
+          </li>
+          <li class="nav-menu-list-item">
+            <a class="site-page-links" id="definitions-page-link" href="definitions.html">Definitions</a> 
+          </li>
+        </ul> <!-- This is the end of the menu items list -->
+      </div> <!-- This is the division that holds all things related to the menu tab. The menu is hidden by default and is shown by a mouse hover over this tab as defined in the javascript file.-->
+      <div class="menu-title-tab" id="menu-tab"> <!-- This is the menu tab -->
+        <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
+      </div> <!-- The end of the menu tab division -->              
+    </nav> <!-- The end of the nav section -->
+    <main class="main"> <!-- This is the beginning of the main section. The main section is where all things other than the header, nav menu and footer reside -->
+      <div class="main-section">
+        <div class="subject">
+          <h2>Definitions and Terminology used in Web Development</h2>
+          <h3><em>&#8258;&nbsp;Knowing the proper Definitions and Terminology associated with Web Development is Crucial!.&nbsp;&#8258;</em></h3>
+        </div>
+        <section class="topics">
+        <div>
+          <span class="steps">1. <span class="bullet-style">&Dagger;&nbsp;</span><span style="text-decoration:underline ;">HTML terminology</span><span class="bullet-style">&nbsp;&Dagger;</span></span><br>
+      
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>HTML<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">Hyper Text Markup Language, is the standard markup language for creating Web pages.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Element<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">An HTML element is defined by a start tag, some content, and an end tag.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Tag<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">HTML tags are the hidden keywords within a web page that define how your web browser must format and display the content.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Attribute<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">Additional information about an element that you can include in the opening tag. For example, class and id are attributes.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Class<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">HTML elements can have one or more classes, separated by spaces. You can style elements using CSS by selecting them with their classes.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>ID<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">An HTML element can have an id attribute to identify it. ID elements should always be unique to that single element.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Head<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">Tag that surrounds important content that is invisible to the user, but is important to the browser. Elements within this tag contain metadata about the page and links to stylesheets, scripts, etc.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Body<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">The body is the container for all of a page's content. It comes after the &lt;&sol;head&gt; tag, and before the &lt;&sol;html&gt; tag.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Div<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">A Div is an element that is a container for grouping content. This makes layout of content easier to manage<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Similar to the &lt;div&gt; is the &lt;section&gt;. </span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Children<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">An element that is an immediate descendent of another element or nested within another element is called a child.</span></p>
+          <br>
+          <span class="steps"><span class="bullet-style">&Dagger;&nbsp;</span><span style="text-decoration: underline;">CSS terminology</span><span class="bullet-style">&nbsp;&Dagger;</span></span><br>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Declaration<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">A single line of CSS that appears between the curly braces. For example;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="base-selector">body</span>&nbsp;&lcub;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">font-family</span>: <span style="color: green;">'Arial, sans-serif'</span>;&nbsp;<strong><em>&larr; is a declaration.</em></strong><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rcub;</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Property<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">The part before the colon in a declaration. In the example above, <span style="color: blue;">`font-family`</span> is the property.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Value<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">The part after the colon in a declaration². In the example above, <span style="color: green;">`Arial, sans-serif`</span> is the value.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Declaration Block<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">The section of CSS where the property/value pairs appear. Everything found between the curly braces is a declaration block.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>Style Rule (or Rule Set)<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">A section of CSS including the selector, the curly braces, and the different lines with properties and values.</span></p>
+      
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>#id-name<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">This is referred to as an <span style="color: brown;">••ID selector••</span>. It selects an element based on its ID attribute.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>.class-name<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">This is known as a <span style="color: brown;">••class selector••</span>. It selects elements based on their class attribute.</span></p>
+          <p><span class="definition"><span class="bullet-style">&dagger;&nbsp;</span>body<span class="bullet-style">&nbsp;&dagger;</span></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="definition-term">This is called a <span style="color: brown;">••type selector••</span>. It selects elements based on their element type.</span></p>
+          <br>
+  
+          <div class="resource-links">      
+            <span>For More Information:</span>
+            <p><span>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors.">(1) CSS selectors - CSS: Cascading Style Sheets | MDN - MDN Web Docs.</a><br>
+              <a href="https://www.impressivewebs.com/css-terms-definitions/.">(2) A List of CSS Terms and Definitions - Impressive Webs.</a><br>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors.">(3) CSS selectors - Learn web development | MDN - MDN Web Docs.</a><br>
+              <a href="https://css-tricks.com/css-ruleset-terminology/.">(4) CSS Ruleset Terminology | CSS-Tricks - CSS-Tricks.</a><br>
+              <a href="https://careerkarma.com/blog/css-terminology/.">(5) Glossary of CSS Terminology: A Beginner's Guide - Career Karma.</a><br>
+            </span></p>
+          </div>
+        </div>
+      </section>  
+    </main>      
+  </body>
+</html>
