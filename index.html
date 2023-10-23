@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" content="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site">
-    <title>Beginner Web Development Reference Site</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<html lang="en"> <!-- html is the start of the document, en is the Language the document is written for -->
+  <head> <!-- The head section holds all the things needed to initialize the envoirnment that will display the website-->
+    <meta charset="UTF-8" content="UTF-8"> <!-- This tells the browswer what character set to use to display characters properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the initial viewport width based on initial window size -->
+    <meta name="description" content="Beginner HTML/CSS and JavaScript Reference Site"> <!-- Something for search engines to use -->
+    <title>Beginner Web Development Reference Site</title> <!-- The title displayed on browser tab -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"><!-- This contains the icon displayed on browser tab -->
     <link rel="stylesheet" href="green-color-style.css" id="color-style-sheet"> <!-- This is the default color scheme and handles most color styles for the page. -->
     <link rel="stylesheet" href="common-style.css" id="common-style"> <!-- This is for styles common to all pages except color.  -->
     <link rel="stylesheet" href="home-style.css" id="specific-style"> <!-- This contains styling specific to this page. -->
     <script src="home.js"></script> <!-- JavaScript file --><!--Currently all files will be in same directory until I figure out how to create additional ones here -->
-  </head>
-  <body class="body">
-    <header class="header"> 
-      <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div>
-      <div class="header-title"><h1>Beginner HTML/CSS & JavaScript Reference Site</h1></div>
-    </header>
-    <nav class=" nav"> <!-- I decided to make the navigation menu as a slideout menu with a tab to hover over to activate it. -->
-      <div class="menu-div" id="side-menu">
-        <ul class="nav-menu-list">
-          <li class="nav-menu-list-item">
+  </head> <!-- The end of the head section -->
+  <body class="body"> <!-- The beginning of the body section. The body section is where all of the page content resides. It usually takes the class of 'body'-->
+    <header class="header"> <!-- This is the beginning of the Header Section. The header section holds all things header related. It usually takes the class of 'header'-->
+      <div class="logo"><img id="header-logo" class="logo-img" src="logo.png" alt="logo image"></div> <!-- Logo image for the header. Currenlty this  is Temporary. Logo Images typically run 200px x 50px-->
+      <div class="header-title"><h1>Beginner HTML/CSS & JavaScript Reference</h1></div> <!-- This is the Title for the document, It sits in the header with the logo -->
+    </header> <!-- The end of the header section. The header is in it's own secion to make styling and placing it easer to manage.-->
+    <nav class=" nav"> <!-- This is the navigation menu section it holds all things menu related -->
+      <div class="menu-div" id="menu-box"> <!-- This division within the nav section holds the menu box which holds all list items for navigating the site -->
+        <ul class="nav-menu-list"> <!-- This is an un-ordered list of menu link items -->
+          <li class="nav-menu-list-item"> <!-- A list item like all of the rest in this list. each one holds a link -->
             <a class="site-page-links" id="home-page-link" href="index.html">Home</a>
           </li>
           <li class="nav-menu-list-item">
@@ -29,19 +29,19 @@
             <a class="site-page-links" id="image-ref-page-link" href="imageref.html">Image Reference</a>
           </li>
           <li>
-            <a href="#">last line</a>
+            <a href="#">last line</a> <!-- Place holder for an additional list item -->
           </li>
-        </ul>
-      </div>
-      <div class="rotated-text-container"> <!-- This is the menu tab -->
+        </ul> <!-- This is the end of the menu items list -->
+      </div> <!-- This is the division that holds all things related to the menu tab. The menu is hidden by default and is shown by a mouse hover over this tab as defined in the javascript file.-->
+      <div class="menu-title-tab" id="menu-tab"> <!-- This is the menu tab -->
         <span>&nbsp;MENU&nbsp;</span> <!-- The text on the tab -->
-      </div>                  
-    </nav>
-    <main class="main">
-      <div class="topic"><h2>The Basic Html Layout</h2></div> <!-- A section topic -->
-      <figcaption>home.html</figcaption>
-      <div class="code-block">
-        <figure class="html-code-block">
+      </div> <!-- The end of the menu tab division -->              
+    </nav> <!-- The end of the nav section -->
+    <main class="main"> <!-- This is the beginning of the main section. The main section is where all things other than the header, nav menu and footer reside -->
+      <div class="topic"><h2>The Basic Html Layout</h2></div> <!-- This dicision holds the first section topic. It is in it's own div for ease of mangement -->
+      <figcaption>home.html</figcaption> <!-- This is a caption for the following content which simutaes a block of HTML code, the 'figcaption' element is typically used in conjunction with the 'figure' element -->
+      <div class="code-block"> <!-- This division holds the block of simulated code -->
+        <figure class="html-code-block"> <!-- The 'figure' element is used in conjustion with the 'figcaption' element -->
           <span class="line-numbers">&nbsp;&nbsp;1</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="punctuation">&excl;</span><span class="doctype">DOCTYPE</span>&nbsp;<span class="property-values">html</span><span class="punctuation">&gt;</span><br>
           <span class="line-numbers">&nbsp;&nbsp;2</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">html</span>&nbsp<span class="property">lang</span><span class="punctuation">&#61;&quot;</span><span class="property-values">en</span><span class="punctuation">&quot;&colon;</span><br>
           <span class="line-numbers">&nbsp;&nbsp;3</span>&nbsp;&nbsp;<span class="punctuation">&lt;</span><span class="element-name">head</span><span class="punctuation">&gt;</span><br>
@@ -66,12 +66,12 @@
           <span class="line-numbers">22</span><br>
           <span class="line-numbers">23&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">body</span><span class="punctuation">&gt;</span></span><br>
           <span class="line-numbers">24&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&lt;&sol;</span><span class="element-name">html</span><span class="punctuation">&gt;</span></span><br>            
-        </figure>
-      </div>
-      <div class="topic"><h2>The basic CSS stylesheet</h2></div>
-      <figcaption>style.css</figcaption>
-      <div class="codeBlock">
-        <figure class="css-code-block">
+        </figure> <!-- The end of the simulated code, All of the elements, classes and any id's used in the above text is for styling in order to color the text similar to how an IDE would display it -->
+      </div> <!-- The end of the simulated HTML code block division -->
+      <div class="topic"><h2>The basic CSS stylesheet</h2></div> <!-- A division holding the topic for the second simulated code block -->
+      <figcaption>style.css</figcaption> <!-- The caption for the CSS simulated code block -->
+      <div class="codeBlock"> <!-- The division holding the CSS simulated code block -->
+        <figure class="css-code-block"> <!-- the figure element that holds the actual simulated code text -->
           <span class="line-numbers">&nbsp;1&nbsp;&nbsp;&nbsp;</span><span class="base-selector">body </span><span class=" punctuation">&lcub;</span><br>
           <span class="line-numbers">&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">display</span><span class=" punctuation">&colon;</span><span class="c-text"> block</span><span class=" punctuation">&#59;</span><br>
           <span class="line-numbers">&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-text">border</span><span class=" punctuation">&colon;</span><span class="c-text"><span class="number">3</span><span class="unit">px</span> solid grey</span></span><span class=" punctuation">&#59;</span><br>
@@ -87,17 +87,17 @@
           <span class="line-numbers">13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">font-family</span><span class=" punctuation">&colon;</span><span class="c-text"> Georgia</span><span class=" punctuation">&#59;</span><br>
           <span class="line-numbers">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c-text">margin-bottom</span><span class=" punctuation">&colon;</span><span class="c-text"> <span class="number">40</span><span class="unit">px</span></span><span class=" punctuation">&#59;</span><br>
           <span class="line-numbers">15&nbsp;&nbsp;&nbsp;</span><span class="punctuation">&rcub;</span>
-        </figure>
-      </div>
-      <div class="topic"><h3>A good website follows these guidlines:</h3></div>    
-      <article class="article">
+        </figure> <!-- The end of the CSS code text -->
+      </div> <!-- The end of the Css code block division -->
+      <div class="topic"><h3>A good website follows these guidlines:</h3></div> <!-- A division holding the topic for the next section --> 
+      <article class="article"> <!-- An 'article' element holding the summary for the above figures. Typically 'article' elements are used for content intended on sharing. I felt this was a nice short, informative sharable piece, so that is why I used the 'article' tag as opposed to a div or even a paragrapgh tag <p> -->
           - The page has a <span class="emphasis">DOCTYPE</span> declaration, a <span class="emphasis">lang</span> attribute, and a <span class="emphasis">head</span> and <span class="emphasis">body</span> section.<br>
           - The page uses <span class="emphasis">meta</span> tags to specify the character encoding, the viewport, and the compatibility mode.<br>
           - The page links to an external <span class="emphasis">stylesheet</span> and a <span class="emphasis">script</span> file using the <span class="emphasis">link</span> and <span class="emphasis">script</span> tags.<br>
           - The page uses <span class="emphasis">headings</span>, <span class="emphasis">paragraphs</span>, <span class="emphasis">emphasis</span>, <span class="emphasis">lists</span>, and <span class="emphasis">links</span> to format the content.<br>
           - The page uses <span class="emphasis">classes</span> and <span class="emphasis">selectors</span> to apply styles to the elements.<br>
           - The page follows the <span class="emphasis">indentation</span> and <span class="emphasis">spacing</span> conventions for HTML, CSS and JavaScript.<br>
-      </article>
-    </main>
-  </body>
-</html>
+      </article> <!-- The end of the article text. You will notice I used some HTML formating similar to the code text for extra styling within sentences -->
+    </main> <!-- The end of the main section -->
+  </body> <!-- The end of the body section -->
+</html> <!-- the end of the document -->
