@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const sideMenu = document.getElementById('side-menu');
-  const menuTab = document.querySelector('.rotated-text-container');
+  const sideMenu = document.getElementById('menu-box');
+  const menuTab = document.querySelector('.menu-title-tab');
   let isMenuOpen = false;
 
   // Function to toggle the menu
