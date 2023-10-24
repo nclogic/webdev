@@ -1,0 +1,22 @@
+{
+   "tooltip1": "'&lt;!DOCTYPE html&gt; Defines the document type as HTML, ensuring the browser interprets the page correctly.'",
+   "tooltip2": "'The opening html element is the start of the document, en is the Language the document is written for.'",
+   "tooltip3": "'The head section holds all the things needed to initialize the environment that will display the website, the content in the head is invisible to the user.'",
+   "tooltip4": "'This tells the browswer what character set to use to display characters properly.'",
+   "tooltip5": "'Sets the initial viewport width based on initial window size.'",
+   "tooltip6": "'Ensures the web page is displayed in the highest mode available for the Internet Explorer browser.'",
+   "tooltip7": "'This contains the location for the stylesheet.'",
+   "tooltip8": "'This contains the location of the JavaScript file'",
+   "tooltip9": "'The title displayed on browser tab and identifies the site to search engines.'",
+   "tooltip10": "'The closing tag for the head element.'",
+   "tooltip11": "'The opening body element, the beginning of the page content.'",
+   "tooltip12": "'This is an example of text using the h1 element and being given a class of header.'",
+   "tooltip13": "'This is an example of text using an h2 element.'",
+   "tooltip14": "'This is an example of text using an h3 element.'",
+   "tooltip15": "'This is an example of a sentance with emphasized text.'",
+   "tooltip16": "'This is the beginning of an unordered list'",
+   "tooltip17": "'These are list items.'",
+   "tooltip18": "'This is the end of the unordered list.'",
+   "tooltip19": "'This is the end of the body section.'",
+   "tooltip20": "'This is the end of the document.'"
+}
