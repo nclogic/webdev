@@ -5,7 +5,7 @@
   --site-default-head-foot-bg-color: #bcda9a;
   --site-default-head-foot-text-color: #075a0e;
   --site-default-imortant-text-color : #cc5460;
-  --site-default-menu-panel-bg-color: #bcda9ae6;
+  --site-default-menu-panel-bg-color: #bcda9af3;
 }
 /* Styling for the body element */
 body { 
@@ -58,6 +58,8 @@ text-align: left;
   overflow: hidden; /* This hides the content inside the menu while it is collapsed*/
   background-color: var(--site-default-menu-panel-bg-color); /* Background color */
   color: var(--site-default-head-foot-text-color); /* Text color */
+  border-bottom-right-radius: 15px ;
+  border-bottom-left-radius: 15px;
   margin-top: -1px; /* This distance is needed to hug the menu container to the header. it's actually over lapping a little */
   z-index: -1; /* This is used to hide the overlap by making it set under the header. I this so when menu is collapsed, it will definitly be hidden behind header.*/
 }
@@ -80,8 +82,9 @@ text-align: left;
   grid-template-columns: 1fr 9fr;
   color: var(--site-default-head-foot-text-color);
   background-color: var(--site-default-head-foot-bg-color); /* Background color */
-  border-bottom: 3px solid var(--site-default-head-foot-text-color);
+  border-bottom: 7px solid var(--site-default-head-foot-text-color);
   border-radius: 10px;
+  margin-bottom: -2px;
 }
 .header-title h1 {
   display: block; /* Makes the element act as inline-level blocks, allowing them to flow horizontally alongside other elements.*/
@@ -111,8 +114,9 @@ text-align: left;
   padding: 2px 2px;
 }
 /* This is styling for the menu tab */
-.menu-title-tab { 
-
+.menu-title-tab {
+  position: absolute;
+  height: auto;
   margin-top: 0px; /* set to hug bottom of the menu */
   width: 74px;
   font-size: 21px; 
@@ -259,4 +263,15 @@ text-align: left;
     top: 18%; /* Adjust this value as needed */
     /* Other styling properties */
   }
+}
+.tooltip {
+  cursor: pointer;
+}
+#tooltip-container {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: none;
+  z-index: 1000; /* Adjust this as needed */
 }
